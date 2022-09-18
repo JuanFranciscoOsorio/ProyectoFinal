@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row" style="width: 100%">
+        <div class="col-lg-6 offset-lg-3 ">
+            <div class="card text-left" style="padding: 20px">
+                <h3><strong>LOGIN</strong></h3>
+                <br>
+                <!--PARA CREAR EL FORMULARIO-->
+                <form [formGroup]="login" (ngSubmit)=log()> <!--login es el que tengo login components, en login: FormGroup-->
+                    <div class="form group" > <!--style="text-align: left;" puedo colocar esta linea para que se 
+                    quede a la izquierda pero en esta version no es necesaria-->
+
+                        <input type="text" class="form-control" placeholder="USUARIO" formControlName="usuario">
+                        <span class="text-danger">
+                            Usuario es obligatorio
+                        </span>
+                    </div>
+                    <br>
+                    <div class="form group">
+                        <input type="text" class="form-control" placeholder="CONTRASEÑA" formControlName="password">
+                        <span class="text-danger">
+                             Contraseña obligatoria
+                            
+                            
+                        </span>
+                    </div>
+                    <div class="form group">
+                        <br>
+                        <button class="btn btn-primary mr-5 btn-login" type ="submit">ACEPTAR</button> <!--mr-2 PARA SEPAR LOS BTN-->
+                        <button class="btn btn-secondary btn-volver" routerLink="/bienvenidos">VOLVER</button> 
+                        <!--AL COLOCAR SECONDARY CAMBIA EL ESTILO DEL BOTON-->
+
+                        <div class="form-group">
+                            <br>
+                            <a style="color: crimson ; cursor:pointer;" routerLink="/register">CREAR CUENTA</a>
+                        </div>
+                    </div>     
+                </form>
+            </div>
+        </div>
+    </div>     
+</div>

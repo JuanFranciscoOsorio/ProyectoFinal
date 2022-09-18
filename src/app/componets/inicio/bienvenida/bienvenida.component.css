@@ -1,0 +1,39 @@
+p {
+
+    font-family: 'Shadows Into Light Two', cursiva;
+    font-size: 2.60em;
+    color:blanchedalmond 
+}
+
+.container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vh;
+    width: 100px;
+}
+
+
+
+hr {
+    border-width: 10px;
+    border-color: blanchedalmond;
+}
+
+.btn-xl {
+    background-color: darkkhaki;
+    border-color: darkkhaki;
+    margin: 10px;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+}
+
+/*efecto cuando el usuario pasa el cursor sobre el boton*/
+.btn-xl:hover {
+    background-color: darkkhaki;
+    border-radius: darkkhaki;
+    ;
+    border-width: 4px;
+}
