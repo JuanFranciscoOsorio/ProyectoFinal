@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 //import { FormGroup } from '@angular/forms';
+import { Usuario} from '../../../models/usuario'; 
+//nombre de la clase dentro de los parentesis
 
 @Component({
   selector: 'app-login',
@@ -9,22 +11,30 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  login: FormGroup;
+  login: FormGroup; 
 
   constructor(private fb: FormBuilder) {
     this.login = this.fb.group({
       usuario: ['',Validators.required],
       password: ['', Validators.required]
 
-    })
-
-   }
+    });
+}
 
   ngOnInit(): void {
   }
 
   log(): void{
     console.log(this.login)
+
+    //creamos constante para que capture el usuario y password
+const usuario: Usuario = {
+  nombreUsuario: this.login.value.usuario,
+  password:this.login.value.password
+}
+  console.log(usuario);
   }
+
+
 
 }

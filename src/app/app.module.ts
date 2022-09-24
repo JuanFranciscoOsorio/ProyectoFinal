@@ -5,6 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import {ReactiveFormsModule } from '@angular/forms'; //esto lo importamos
 
+
+
 //componentes
 import { AppComponent } from './app.component';
 import { InicioComponent } from './componets/inicio/inicio.component';

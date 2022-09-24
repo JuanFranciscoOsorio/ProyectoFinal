@@ -1,0 +1,36 @@
+.container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+
+
+
+h3{
+    /* border-width: 10px;
+     border-color: blanchedalmond;*/
+     font-family: 'Shadows Into Light Two', cursiva;
+     font-size: 2.60em;
+     color:  darkkhaki 
+ }
+
+ 
+ .btn-aceptar {
+    background-color: darkkhaki;
+    border-color: darkkhaki;
+    margin: 10px;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+}
+
+.btn-volver{
+    background-color: gray;
+    border-color: gray;
+    margin: 10px; /*agrega espacio entre los botones*/
+    padding: 1rem 2rem;
+    border-radius: 100px 
+}

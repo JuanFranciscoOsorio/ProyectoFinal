@@ -10,22 +10,24 @@
                     quede a la izquierda pero en esta version no es necesaria-->
 
                         <input type="text" class="form-control" placeholder="USUARIO" formControlName="usuario">
-                        <span class="text-danger">
+                        <span class="text-danger"
+                        *ngIf="login.get('usuario')?.hasError('required') && login.get('usuario')?.touched">
                             Usuario es obligatorio
                         </span>
                     </div>
                     <br>
-                    <div class="form group">
-                        <input type="text" class="form-control" placeholder="CONTRASEÑA" formControlName="password">
-                        <span class="text-danger">
+                    <div class="form group"> <!--tipo password para que aparesca enmascarda-->
+                        <input type="password" class="form-control" placeholder="CONTRASEÑA" formControlName="password">
+                        <span class="text-danger"
+                        *ngIf="login.get('password')?.hasError('required')&& login.get('password')?.touched">
                              Contraseña obligatoria
                             
                             
                         </span>
                     </div>
                     <div class="form group">
-                        <br>
-                        <button class="btn btn-primary mr-5 btn-login" type ="submit">ACEPTAR</button> <!--mr-2 PARA SEPAR LOS BTN-->
+                        <br>     <!--[disabled]="login.invalid, para desabilitar el login si no hay usuario password-->
+                        <button class="btn btn-primary mr-5 btn-login" [disabled]="login.invalid" type ="submit">ACEPTAR</button> <!--mr-2 PARA SEPAR LOS BTN-->
                         <button class="btn btn-secondary btn-volver" routerLink="/bienvenidos">VOLVER</button> 
                         <!--AL COLOCAR SECONDARY CAMBIA EL ESTILO DEL BOTON-->
 
